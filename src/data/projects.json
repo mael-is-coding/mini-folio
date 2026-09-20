@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "name": "KPIten - KPI reporting dashboard",
+    "skills": [1, 2, 3, 4, 5, 9],
+    "status": "ongoing",
+    "short_desc": "A KPI reporting dashboard built during my internship, pulling data from two Odoo instances.",
+    "long_desc": "An internal tool that reports on manufacturing and analytic KPIs sourced from two Odoo instances (v16 and v18). Data is fetched via odoorpc, reshaped with Polars pivot/union pipelines, and rendered as styled tables and charts. The project also involved integrating the tool into the company's Docker/Traefik setup and building a token-based authentication flow so the dashboard can be opened directly from Odoo.",
+    "date_started": "2026-02",
+    "date_ended": null
+  },
+  {
+    "id": 2,
+    "name": "Home server",
+    "skills": [5, 6, 7, 8, 10],
+    "status": "ongoing",
+    "short_desc": "Turning a spare laptop into a self-hosted home server, without router access.",
+    "long_desc": "Repurposing a spare laptop as a small self-hosted server for personal projects. Covers OS choice (a minimal, security-conscious Linux distribution), a Dockerised setup for the running services, and using Cloudflare Tunnel to expose services publicly without access to the home router for port forwarding.",
+    "date_started": "2026-05",
+    "date_ended": null
+  },
+  {
+    "id": 3,
+    "name": "Breakcore production",
+    "skills": [10],
+    "status": "standby",
+    "short_desc": "Exploring breakcore music production, from drum break chopping to synthesis basics.",
+    "long_desc": "A personal music production project exploring breakcore: chopping and sequencing drum breaks as one-shot samples, and learning synthesis fundamentals (oscillators, filters, ADSR). Currently on standby while sourcing more source material and samples to work with.",
+    "date_started": "2025-11",
+    "date_ended": null
+  },
+  {
+    "id": 4,
+    "name": "Nexus Portal Companies - Backend",
+    "skills": [5, 6, 8, 9, 10, 11, 12],
+    "status": "finished",
+    "short_desc": "Recreating part the part of my IUT's ERP that handles the relations between itself and companies through internships and work-studies.",
+    "long_desc": "A full-stack dockerized Node website that features a REST API that allows users to manage internships and work-studies, defenses and teachers bound to them, student's work related documents.",
+    "date_started": "2025-09",
+    "date_ended": "2026-06"
+  },
+  {
+    "id": 5,
+    "name": "Vega-py",
+    "skills": [1, 7, 8, 10],
+    "status": "ongoing",
+    "short_desc": "A CLI-first tool to manage front and themes under Arch Linux",
+    "long_desc": "Making a tool that allows an Arch-based distro user to manage their UI tools' appearance in an easier way. This includes Waybar, WOFI, SwayNC and Sway / Scroll itself. Also allows installing and setting up DEs with one command.",
+    "date_started": "2026-09",
+    "date_ended": null
+  }
+]

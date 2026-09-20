@@ -1,0 +1,394 @@
+/* ---------------------------------------------------------------------
+   Design tokens. Change a value here and it updates the whole site.
+--------------------------------------------------------------------- */
+:root {
+  --bg: #ffffff;
+  --fg: #111111;
+  --muted: #6b6b6b;
+  --border: #dddddd;
+  --surface: #f7f7f7;
+  --highlight: #efefef;
+
+  --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+  --font-body: 'Inter', system-ui, sans-serif;
+  --font-mono: 'IBM Plex Mono', ui-monospace, Consolas, monospace;
+
+  --radius: 2px;
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+/* Visible focus ring everywhere, for keyboard navigation */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--fg);
+  outline-offset: 2px;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+  flex: 1;
+}
+
+/* ---------------------------------------------------------------------
+   Navbar
+--------------------------------------------------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.navbar-links {
+  display: flex;
+  gap: 8px;
+}
+
+.navbar-link {
+  background: none;
+  border: none;
+  font-family: var(--font-mono);
+  font-size: 14px;
+  color: var(--muted);
+  padding: 6px 10px;
+  border-radius: var(--radius);
+}
+
+.navbar-link:hover {
+  color: var(--fg);
+}
+
+.navbar-link-active {
+  color: var(--fg);
+  background: var(--surface);
+}
+
+/* ---------------------------------------------------------------------
+   Home
+--------------------------------------------------------------------- */
+.home {
+  padding-top: 15vh;
+}
+
+.home-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 16px;
+}
+
+.home-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(40px, 8vw, 72px);
+  line-height: 1.05;
+  margin: 0 0 20px;
+}
+
+.home-subtitle {
+  font-size: 18px;
+  color: var(--muted);
+  max-width: 46ch;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------------------
+   Section headings
+--------------------------------------------------------------------- */
+.section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0 0 32px;
+}
+
+/* ---------------------------------------------------------------------
+   Cards (shared by Projects and Skills)
+--------------------------------------------------------------------- */
+.card-list {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--border);
+}
+
+.card {
+  display: flex;
+  gap: 20px;
+  padding: 20px 4px;
+  border-bottom: 1px solid var(--border);
+  text-align: left;
+  background: none;
+  transition: background-color 0.15s ease;
+}
+
+.card:hover {
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.card-highlighted {
+  background: var(--highlight);
+  animation: flash 0.6s ease;
+}
+
+@keyframes flash {
+  0% {
+    background: var(--fg);
+  }
+  100% {
+    background: var(--highlight);
+  }
+}
+
+.card-index {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--muted);
+  flex-shrink: 0;
+  padding-top: 3px;
+}
+
+.card-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.card-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+  margin: 0;
+}
+
+.card-desc {
+  color: var(--muted);
+  margin: 8px 0 12px;
+}
+
+.card-dates {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 12px;
+}
+
+/* ---------------------------------------------------------------------
+   Status marker (projects)
+--------------------------------------------------------------------- */
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.status-glyph {
+  font-size: 10px;
+}
+
+.status-ongoing .status-glyph {
+  color: var(--fg);
+}
+
+/* ---------------------------------------------------------------------
+   Skill tags (clickable, inside project cards/modals)
+--------------------------------------------------------------------- */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 4px 8px;
+  color: var(--fg);
+}
+
+.skill-tag:hover {
+  background: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+/* ---------------------------------------------------------------------
+   Category badge (skills)
+--------------------------------------------------------------------- */
+.badge {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------------------
+   Modal (used by both Projects and Skills popups)
+--------------------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(17, 17, 17, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  z-index: 10;
+}
+
+.modal-content {
+  position: relative;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 560px;
+  width: 100%;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 32px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  color: var(--muted);
+  padding: 4px;
+}
+
+.modal-close:hover {
+  color: var(--fg);
+}
+
+.modal-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.modal-top h3 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  margin: 0;
+}
+
+.modal-dates {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 20px;
+}
+
+.modal-long-desc {
+  margin: 16px 0 20px;
+}
+
+.modal-subheading {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 8px;
+}
+
+.modal-related-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+/* ---------------------------------------------------------------------
+   Small screens
+--------------------------------------------------------------------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 16px;
+  }
+
+  .page-container {
+    padding: 32px 16px 64px;
+  }
+
+  .card {
+    gap: 12px;
+  }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .card-highlighted {
+    animation: none;
+    transition: none;
+  }
+}

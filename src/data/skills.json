@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "Python",
+    "category": "hard",
+    "description": "Primary language for data processing, backend APIs and tooling."
+  },
+  {
+    "id": 2,
+    "name": "Polars",
+    "category": "hard",
+    "description": "DataFrame library used for building pivot, union and transformation pipelines over structured data."
+  },
+  {
+    "id": 3,
+    "name": "FastAPI",
+    "category": "hard",
+    "description": "Python web framework used to build backend APIs and serve dashboards."
+  },
+  {
+    "id": 4,
+    "name": "Odoo ORM & odoorpc",
+    "category": "hard",
+    "description": "Fetching and modelling data from Odoo instances, including custom modules, XML data files and server actions."
+  },
+  {
+    "id": 5,
+    "name": "Docker",
+    "category": "hard",
+    "description": "Containerising services and reasoning about multi-container setups (reverse proxies, networking, volumes)."
+  },
+  {
+    "id": 6,
+    "name": "PostgreSQL",
+    "category": "hard",
+    "description": "Relational database administration: dump restoration, ownership remapping, authentication configuration."
+  },
+  {
+    "id": 7,
+    "name": "Linux Sys-Admin",
+    "category": "hard",
+    "description": "Setting up and maintaining Linux machines and services, from package management to uptime monitoring."
+  },
+  {
+    "id": 8,
+    "name": "Git",
+    "category": "hard",
+    "description": "Version control, including multi-account/SSH attribution setups."
+  },
+  {
+    "id": 9,
+    "name": "Problem solving under ambiguity",
+    "category": "soft",
+    "description": "Working through undocumented or architecturally tangled code and shifting requirements to reach a working solution."
+  },
+  {
+    "id": 10,
+    "name": "Adaptability & self-directed learning",
+    "category": "soft",
+    "description": "Picking up new tools, frameworks and constraints as a project demands them, without formal training."
+  },
+  {
+    "id": 11,
+    "name": "Express.js",
+    "category": "hard",
+    "description": "Node minimalistic backend framework, mainly used to build REST APIs."
+  },
+  {
+    "id": 12,
+    "name": "TypeScript",
+    "category": "hard",
+    "description": "Strongly typed version of JavaScript. I use it whenever available in Node based frameworks."
+  }
+]
