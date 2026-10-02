@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "KPIten - KPI reporting dashboard",
-    "skills": [1, 2, 3, 4, 5, 9],
+    "skills": [1, 2, 3, 4, 5, 9, 13, 14, 16, 18],
     "status": "ongoing",
     "short_desc": "A KPI reporting dashboard built during my internship, pulling data from two Odoo instances.",
     "long_desc": "An internal tool that reports on manufacturing and analytic KPIs sourced from two Odoo instances (v16 and v18). Data is fetched via odoorpc, reshaped with Polars pivot/union pipelines, and rendered as styled tables and charts. The project also involved integrating the tool into the company's Docker/Traefik setup and building a token-based authentication flow so the dashboard can be opened directly from Odoo.",
@@ -12,7 +12,7 @@
   {
     "id": 2,
     "name": "Home server",
-    "skills": [5, 6, 7, 8, 10],
+    "skills": [5, 6, 7, 8, 10, 15],
     "status": "ongoing",
     "short_desc": "Turning a spare laptop into a self-hosted home server, without router access.",
     "long_desc": "Repurposing a spare laptop as a small self-hosted server for personal projects. Covers OS choice (a minimal, security-conscious Linux distribution), a Dockerised setup for the running services, and using Cloudflare Tunnel to expose services publicly without access to the home router for port forwarding.",
@@ -32,7 +32,7 @@
   {
     "id": 4,
     "name": "Nexus Portal Companies - Backend",
-    "skills": [5, 6, 8, 9, 10, 11, 12],
+    "skills": [5, 6, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18],
     "status": "finished",
     "short_desc": "Recreating part the part of my IUT's ERP that handles the relations between itself and companies through internships and work-studies.",
     "long_desc": "A full-stack dockerized Node website that features a REST API that allows users to manage internships and work-studies, defenses and teachers bound to them, student's work related documents.",
