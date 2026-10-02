@@ -71,4 +71,40 @@
     "category": "hard",
     "description": "Strongly typed version of JavaScript. I use it whenever available in Node based frameworks."
   }
+  {
+  "id": 13,
+  "name": "C1",
+  "category": "hard",
+  "description": "Being able to conceive, test, code and integrate software that is relevant to the client's requests. Not just be a coding monkey, and actually getting what the problem is about."
+  },
+  {
+  "id": 14,
+  "name": "C2",
+  "category": "hard",
+  "description": "Choosing the best algorithms and data structures in order to better perfs while limiting ressource use. Knowing what to use for the software to perform, not just to work."
+  },
+  {
+  "id": 15,
+  "name": "C3",
+  "category": "hard",
+  "description": "Administrating complex inter-communicating systems. Basically Sys-Admin"
+  },
+  {
+  "id": 16,
+  "name": "C4",
+  "category": "hard",
+  "description": "Handle data and informations. It's making and using databases that make sense in a way that also makes sense"
+  },
+  {
+  "id": 17,
+  "name": "C5",
+  "category": "hard",
+  "description": "Lead a project. It's planning the way you will handle work load from the project's requirements all the way down to the CI/CD"
+  },
+  {
+  "id": 18,
+  "name": "C6",
+  "category": "hard",
+  "description": "Working as a team. Not because you're required to and not just to ship, but to perform as a team."
+  }
 ]
